@@ -32,102 +32,102 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 
 
 
- B. Given the following data structure:
-
-  users = {
-    "Jonathan" => {
-      :twitter => "jonnyt",
-      :favourite_numbers => [12, 42, 75, 12, 5],
-      :home_town => "Stirling",
-      :pets => {
-        "fluffy" => :cat,
-        "fido" => :dog,
-        "spike" => :dog
-      }
-    },
-    "Erik" => {
-      :twitter => "eriksf",
-      :favourite_numbers => [8, 12, 24],
-      :home_town => "Linlithgow",
-      :pets => {
-        "nemo" => :fish,
-        "kevin" => :fish,
-        "spike" => :dog,
-        "rupert" => :parrot
-      }
-    },
-    "Avril" => {
-      :twitter => "bridgpally",
-      :favourite_numbers => [12, 14, 85, 88],
-      :home_town => "Dunbar",
-      :pets => {
-        "colin" => :snake
-      }
-    }
-  }
-
-# 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-# users["Jonathan"][:twitter]
-# 2. Get Erik's hometown
-# users["Erik"][:home_town]
-# 3. Get the array of Erik's favourite numbers
-# users["Erik"][:favourite_numbers]
-# 4. Get the type of Avril's pet Colin
-# users["Avril"][:pets]["colin"]
-# 5. Get the smallest of Erik's favourite numbers
-# users["Erik"][:favourite_numbers].min
-# 6. Add the number `7` to Erik's favourite numbers
-# users["Erik"][:favourite_numbers].unshift(7)
-# 7. Change Erik's hometown to Edinburgh
-# users["Erik"][:home_town]="Edinburgh"
-# 8. Add a pet dog to Erik called "Fluffy"
-# users["Erik"][:pets]["Fluffy"] = :dog
-# # 9. Add yourself to the users hash
+#  B. Given the following data structure:
 #
-# users = {
-#   "Jonathan" => {
-#     :twitter => "jonnyt",
-#     :favourite_numbers => [12, 42, 75, 12, 5],
-#     :home_town => "Stirling",
-#     :pets => {
-#       "fluffy" => :cat,
-#       "fido" => :dog,
-#       "spike" => :dog
-#     }
-#   },
-#   "Erik" => {
-#     :twitter => "eriksf",
-#     :favourite_numbers => [8, 12, 24],
-#     :home_town => "Linlithgow",
-#     :pets => {
-#       "nemo" => :fish,
-#       "kevin" => :fish,
-#       "spike" => :dog,
-#       "rupert" => :parrot
-#     }
-#   },
-#   "Avril" => {
-#     :twitter => "bridgpally",
-#     :favourite_numbers => [12, 14, 85, 88],
-#     :home_town => "Dunbar",
-#     :pets => {
-#       "colin" => :snake
-#     }
-#   },
-#   "Giuseppe" => {
-#     :twitter => "PeppeI",
-#     :favourite_numbers => [8, 73, 91],
-#     :home_town => "Alghero",
-#     :pets => {
-#       "cthulhu" => :squid
+#   users = {
+#     "Jonathan" => {
+#       :twitter => "jonnyt",
+#       :favourite_numbers => [12, 42, 75, 12, 5],
+#       :home_town => "Stirling",
+#       :pets => {
+#         "fluffy" => :cat,
+#         "fido" => :dog,
+#         "spike" => :dog
+#       }
+#     },
+#     "Erik" => {
+#       :twitter => "eriksf",
+#       :favourite_numbers => [8, 12, 24],
+#       :home_town => "Linlithgow",
+#       :pets => {
+#         "nemo" => :fish,
+#         "kevin" => :fish,
+#         "spike" => :dog,
+#         "rupert" => :parrot
+#       }
+#     },
+#     "Avril" => {
+#       :twitter => "bridgpally",
+#       :favourite_numbers => [12, 14, 85, 88],
+#       :home_town => "Dunbar",
+#       :pets => {
+#         "colin" => :snake
 #       }
 #     }
 #   }
-
-
-
-
-C. Given the following data structure:
+#
+# # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+# # users["Jonathan"][:twitter]
+# # 2. Get Erik's hometown
+# # users["Erik"][:home_town]
+# # 3. Get the array of Erik's favourite numbers
+# # users["Erik"][:favourite_numbers]
+# # 4. Get the type of Avril's pet Colin
+# # users["Avril"][:pets]["colin"]
+# # 5. Get the smallest of Erik's favourite numbers
+# # users["Erik"][:favourite_numbers].min
+# # 6. Add the number `7` to Erik's favourite numbers
+# # users["Erik"][:favourite_numbers].unshift(7)
+# # 7. Change Erik's hometown to Edinburgh
+# # users["Erik"][:home_town]="Edinburgh"
+# # 8. Add a pet dog to Erik called "Fluffy"
+# # users["Erik"][:pets]["Fluffy"] = :dog
+# # # 9. Add yourself to the users hash
+# #
+# # users = {
+# #   "Jonathan" => {
+# #     :twitter => "jonnyt",
+# #     :favourite_numbers => [12, 42, 75, 12, 5],
+# #     :home_town => "Stirling",
+# #     :pets => {
+# #       "fluffy" => :cat,
+# #       "fido" => :dog,
+# #       "spike" => :dog
+# #     }
+# #   },
+# #   "Erik" => {
+# #     :twitter => "eriksf",
+# #     :favourite_numbers => [8, 12, 24],
+# #     :home_town => "Linlithgow",
+# #     :pets => {
+# #       "nemo" => :fish,
+# #       "kevin" => :fish,
+# #       "spike" => :dog,
+# #       "rupert" => :parrot
+# #     }
+# #   },
+# #   "Avril" => {
+# #     :twitter => "bridgpally",
+# #     :favourite_numbers => [12, 14, 85, 88],
+# #     :home_town => "Dunbar",
+# #     :pets => {
+# #       "colin" => :snake
+# #     }
+# #   },
+# #   "Giuseppe" => {
+# #     :twitter => "PeppeI",
+# #     :favourite_numbers => [8, 73, 91],
+# #     :home_town => "Alghero",
+# #     :pets => {
+# #       "cthulhu" => :squid
+# #       }
+# #     }
+# #   }
+#
+#
+#
+#
+# C. Given the following data structure:
 
 
 united_kingdom = [
@@ -148,22 +148,31 @@ united_kingdom = [
 #
 # 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
 #
-#   capital_array = united_kingdom.find { |uk_country| uk_country[:capital] == "Swansea" }
-#   capital_array[:capital] = "Cardiff"
-#   united_kingdom
+#  capital_array = united_kingdom.find { |uk_country| uk_country[:capital] == "Swansea" }
+#  capital_array[:capital] = "Cardiff"
+#  united_kingdom
 #
 # # 2. Create a Hash for Northern Ireland and add it to the
 # # `united_kingdom` array (The capital is Belfast,
 # #  and the population is 1,811,000)
 #
 # united_kingdom.sort_by { |uk_country| uk_country[:name] }.each do |uk_country|
-#
-#   puts "#{[:name]}, #{uk_country[:capital]}"
-#
+#   p "#{[:name]}, #{uk_country[:capital]}"
 # end
 
 
 # 3. Use a loop to print the names of all the countries in the UK.
-
+#
+# for country in united_kingdom
+#   p "#{country[:name]}"
+# end
 
 # 4. Use a loop to find the total population of the UK.
+
+# total_population = 0
+#
+# for country in united_kingdom
+#   total_population += country[:population]
+# end
+#
+# p total_population

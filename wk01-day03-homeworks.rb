@@ -67,7 +67,43 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
       }
     }
   }
-#
+
+  1. Return Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+  users["Jonathan"][:twitter]
+  2. Return Erik's hometown
+  users["Erik"][:home_town]
+  3. Return the array of Erik's favourite numbers
+  users["Erik"][:favourite_numbers]
+  4. Return the type of Avril's pet Colin
+  users["Avril"][:pets]["colin"].to_s
+  5. Return the smallest of Erik's favourite numbers
+  users["Erik"][:favourite_numbers].min
+  6. Return an array of Avril's favourite numbers that are even
+  even_numbers = []
+  for num in users["Avril"][:favourite_numbers]
+    even_numbers << num if num.even?
+  end
+  7. Return an array of Jonathan's favourite numbers, sorted in ascending order and excluding duplicates
+  users["Jonathan"][:favourite_numbers].sort.uniq
+  8. Add the number `7` to Erik's favourite numbers
+  users["Erik"][:favourite_numbers].unshift(7)
+  9. Change Erik's hometown to Edinburgh
+  users["Erik"][:home_town]="Edinburgh"
+  10. Add a pet dog to Erik called "Fluffy"
+  users["Erik"][:pets]["Fluffy"] = :dog
+  11. Add yourself to the users hash
+  me = {
+  :twitter => "PeppeI",
+  :favourite_numbers => [8, 73, 91],
+  :home_town => "Alghero",
+  :pets => {
+    "cthulhu" => :squid
+       }
+     }
+
+  users["Giuseppe"] = me
+
+
 # # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 # # users["Jonathan"][:twitter]
 # # 2. Get Erik's hometown
@@ -75,106 +111,39 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 # # 3. Get the array of Erik's favourite numbers
 # # users["Erik"][:favourite_numbers]
 # # 4. Get the type of Avril's pet Colin
-
-
- users["Avril"][:pets]["colin"].to_s
+# users["Avril"][:pets]["colin"].to_s
 # # 5. Get the smallest of Erik's favourite numbers
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # # users["Erik"][:favourite_numbers].min
+
+
+
 # # 6. Add the number `7` to Erik's favourite numbers
 # # users["Erik"][:favourite_numbers].unshift(7)
 # # 7. Change Erik's hometown to Edinburgh
 # # users["Erik"][:home_town]="Edinburgh"
 # # 8. Add a pet dog to Erik called "Fluffy"
-# # users["Erik"][:pets]["Fluffy"] = :dog
+#users["Erik"][:pets]["Fluffy"] = :dog
 # # # # 9. Add yourself to the users hash
-#
-# users = {
-#   "Jonathan" => {
-#     :twitter => "jonnyt",
-#     :favourite_numbers => [12, 42, 75, 12, 5],
-#     :home_town => "Stirling",
-#     :pets => {
-#       "fluffy" => :cat,
-#       "fido" => :dog,
-#       "spike" => :dog
-#     }
-#   },
-#   "Erik" => {
-#     :twitter => "eriksf",
-#     :favourite_numbers => [8, 12, 24],
-#     :home_town => "Linlithgow",
-#     :pets => {
-#       "nemo" => :fish,
-#       "kevin" => :fish,
-#       "spike" => :dog,
-#       "rupert" => :parrot
-#     }
-#   },
-#   "Avril" => {
-#     :twitter => "bridgpally",
-#     :favourite_numbers => [12, 14, 85, 88],
-#     :home_town => "Dunbar",
-#     :pets => {
-#       "colin" => :snake
-#     }
-#   }
-#   # "Giuseppe" => {
-#   #   :twitter => "PeppeI",
-#   #   :favourite_numbers => [8, 73, 91],
-#   #   :home_town => "Alghero",
-#   #   :pets => {
-#   #     "cthulhu" => :squid
-#   #     }
-#   #   }
-#   }
-#
-#
-#
-#
-#
-# users = {}
-# users.merge {"Giuseppe" => {:twitter => "PeppeI", :favourite_numbers => [8, 73, 91],
+# me = {
+#   :twitter => "PeppeI",
+#   :favourite_numbers => [8, 73, 91],
 #   :home_town => "Alghero",
 #   :pets => {
 #     "cthulhu" => :squid
 #     }
-#   }}}
+#   }
 #
-#   p users
+# users["Giuseppe"] = me
+# 10 Return an array of Avril's favourite numbers that are even
+# even_numbers = []
+# for num in users["Avril"][:favourite_numbers]
+#   even_numbers << num if num.even?
+# end
+#7 Return an array of Jonathan's favourite numbers, sorted in ascending order and excluding duplicates
+
+
+users["Jonathan"][:favourite_numbers].sort.uniq
+
 #
 # #
 # # C. Given the following data structure:

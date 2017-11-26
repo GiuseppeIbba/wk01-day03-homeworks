@@ -5,7 +5,6 @@
 
 stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
 
-
 # 1. Add `"Edinburgh Waverley"` to the end of the array
 # stops << "Edinburgh Waverley"
 # 2. Add `"Glasgow Queen St"` to the start of the array
@@ -13,7 +12,27 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 # 3. Add `"Polmont"` at the appropriate point (between `"Falkirk High"` and `"Linlithgow"`)
 # stops.insert(3, "Polmont")
 # 4. Work out the index position of `"Linlithgow"`
-# stops[3]
+
+
+
+
+
+
+
+
+
+
+
+
+p stops.index("Linlithgow")
+
+
+
+
+
+
+
+
 # 5. Remove `"Livingston"` from the array using its name
 # stops.delete("Livingston")
 # 6. Delete `"Cumbernauld"` from the array by index
@@ -82,97 +101,109 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 # # users["Erik"][:home_town]="Edinburgh"
 # # 8. Add a pet dog to Erik called "Fluffy"
 # # users["Erik"][:pets]["Fluffy"] = :dog
-# # # 9. Add yourself to the users hash
+# # # # 9. Add yourself to the users hash
+#
+# users = {
+#   "Jonathan" => {
+#     :twitter => "jonnyt",
+#     :favourite_numbers => [12, 42, 75, 12, 5],
+#     :home_town => "Stirling",
+#     :pets => {
+#       "fluffy" => :cat,
+#       "fido" => :dog,
+#       "spike" => :dog
+#     }
+#   },
+#   "Erik" => {
+#     :twitter => "eriksf",
+#     :favourite_numbers => [8, 12, 24],
+#     :home_town => "Linlithgow",
+#     :pets => {
+#       "nemo" => :fish,
+#       "kevin" => :fish,
+#       "spike" => :dog,
+#       "rupert" => :parrot
+#     }
+#   },
+#   "Avril" => {
+#     :twitter => "bridgpally",
+#     :favourite_numbers => [12, 14, 85, 88],
+#     :home_town => "Dunbar",
+#     :pets => {
+#       "colin" => :snake
+#     }
+#   }
+#   # "Giuseppe" => {
+#   #   :twitter => "PeppeI",
+#   #   :favourite_numbers => [8, 73, 91],
+#   #   :home_town => "Alghero",
+#   #   :pets => {
+#   #     "cthulhu" => :squid
+#   #     }
+#   #   }
+#   }
+#
+#
+#
+#
+#
+# users = {}
+# users.merge {"Giuseppe" => {:twitter => "PeppeI", :favourite_numbers => [8, 73, 91],
+#   :home_town => "Alghero",
+#   :pets => {
+#     "cthulhu" => :squid
+#     }
+#   }}}
+#
+#   p users
+#
 # #
-# # users = {
-# #   "Jonathan" => {
-# #     :twitter => "jonnyt",
-# #     :favourite_numbers => [12, 42, 75, 12, 5],
-# #     :home_town => "Stirling",
-# #     :pets => {
-# #       "fluffy" => :cat,
-# #       "fido" => :dog,
-# #       "spike" => :dog
-# #     }
-# #   },
-# #   "Erik" => {
-# #     :twitter => "eriksf",
-# #     :favourite_numbers => [8, 12, 24],
-# #     :home_town => "Linlithgow",
-# #     :pets => {
-# #       "nemo" => :fish,
-# #       "kevin" => :fish,
-# #       "spike" => :dog,
-# #       "rupert" => :parrot
-# #     }
-# #   },
-# #   "Avril" => {
-# #     :twitter => "bridgpally",
-# #     :favourite_numbers => [12, 14, 85, 88],
-# #     :home_town => "Dunbar",
-# #     :pets => {
-# #       "colin" => :snake
-# #     }
-# #   },
-# #   "Giuseppe" => {
-# #     :twitter => "PeppeI",
-# #     :favourite_numbers => [8, 73, 91],
-# #     :home_town => "Alghero",
-# #     :pets => {
-# #       "cthulhu" => :squid
-# #       }
-# #     }
+# # C. Given the following data structure:
+# #
+# #
+# # united_kingdom = [
+# #   {
+# #     name: "Scotland",
+# #     population: 5295000,
+# #     capital: "Edinburgh"
+# #   }, {
+# #     name: "Wales",
+# #     population: 3063000,
+# #     capital: "Swansea"
+# #   }, {
+# #     name: "England",
+# #     population: 53010000,
+# #     capital: "London"
 # #   }
+# # ]
+# # #
+# # 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
+# #
+# #   capital_array = united_kingdom.find { |uk_country| uk_country[:capital] == "Swansea" }
+# #   capital_array[:capital] = "Cardiff"
+# #   united_kingdom
+# #
+# # # 2. Create a Hash for Northern Ireland and add it to the
+# # # `united_kingdom` array (The capital is Belfast,
+# # #  and the population is 1,811,000)
+# #
+# # united_kingdom.sort_by { |uk_country| uk_country[:name] }.each do |uk_country|
+# #   p "#{[:name]}, #{uk_country[:capital]}"
+# # end
 #
 #
+# # 3. Use a loop to print the names of all the countries in the UK.
+# #
+# # for country in united_kingdom
+# #   p "#{country[:name]}"
+# # end
 #
+# # 4. Use a loop to find the total population of the UK.
 #
-# C. Given the following data structure:
-
-
-united_kingdom = [
-  {
-    name: "Scotland",
-    population: 5295000,
-    capital: "Edinburgh"
-  }, {
-    name: "Wales",
-    population: 3063000,
-    capital: "Swansea"
-  }, {
-    name: "England",
-    population: 53010000,
-    capital: "London"
-  }
-]
-#
-# 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
-#
-#  capital_array = united_kingdom.find { |uk_country| uk_country[:capital] == "Swansea" }
-#  capital_array[:capital] = "Cardiff"
-#  united_kingdom
-#
-# # 2. Create a Hash for Northern Ireland and add it to the
-# # `united_kingdom` array (The capital is Belfast,
-# #  and the population is 1,811,000)
-#
-# united_kingdom.sort_by { |uk_country| uk_country[:name] }.each do |uk_country|
-#   p "#{[:name]}, #{uk_country[:capital]}"
-# end
-
-
-# 3. Use a loop to print the names of all the countries in the UK.
-#
-# for country in united_kingdom
-#   p "#{country[:name]}"
-# end
-
-# 4. Use a loop to find the total population of the UK.
-
-# total_population = 0
-#
-# for country in united_kingdom
-#   total_population += country[:population]
-# end
-#
-# p total_population
+# # total_population = 0
+# #
+# # for country in united_kingdom
+# #   total_population += country[:population]
+# # end
+# #
+# # p total_population

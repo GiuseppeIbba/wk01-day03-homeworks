@@ -20,34 +20,10 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 # 7. How many stops there are in the array?
 # stops.length
 # 8. How many ways can we return `"Falkirk High"` from the array?
-
-
-p stops[2]
-p stops.values_at(2)
-p stops.slice(2)
-p stops[-4]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # stops[2]
+# stops.values_at(2)
+# stops.slice(2)
+# stops[-4]
 # 9. Reverse the positions of the stops in the array
 # stops.reverse
 # 10. Print out all the stops using a for loop
@@ -58,39 +34,39 @@ p stops[-4]
 
 
 
-#  B. Given the following data structure:
-#
-#   users = {
-#     "Jonathan" => {
-#       :twitter => "jonnyt",
-#       :favourite_numbers => [12, 42, 75, 12, 5],
-#       :home_town => "Stirling",
-#       :pets => {
-#         "fluffy" => :cat,
-#         "fido" => :dog,
-#         "spike" => :dog
-#       }
-#     },
-#     "Erik" => {
-#       :twitter => "eriksf",
-#       :favourite_numbers => [8, 12, 24],
-#       :home_town => "Linlithgow",
-#       :pets => {
-#         "nemo" => :fish,
-#         "kevin" => :fish,
-#         "spike" => :dog,
-#         "rupert" => :parrot
-#       }
-#     },
-#     "Avril" => {
-#       :twitter => "bridgpally",
-#       :favourite_numbers => [12, 14, 85, 88],
-#       :home_town => "Dunbar",
-#       :pets => {
-#         "colin" => :snake
-#       }
-#     }
-#   }
+ # B. Given the following data structure:
+
+  users = {
+    "Jonathan" => {
+      :twitter => "jonnyt",
+      :favourite_numbers => [12, 42, 75, 12, 5],
+      :home_town => "Stirling",
+      :pets => {
+        "fluffy" => :cat,
+        "fido" => :dog,
+        "spike" => :dog
+      }
+    },
+    "Erik" => {
+      :twitter => "eriksf",
+      :favourite_numbers => [8, 12, 24],
+      :home_town => "Linlithgow",
+      :pets => {
+        "nemo" => :fish,
+        "kevin" => :fish,
+        "spike" => :dog,
+        "rupert" => :parrot
+      }
+    },
+    "Avril" => {
+      :twitter => "bridgpally",
+      :favourite_numbers => [12, 14, 85, 88],
+      :home_town => "Dunbar",
+      :pets => {
+        "colin" => :snake
+      }
+    }
+  }
 #
 # # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 # # users["Jonathan"][:twitter]
@@ -99,8 +75,44 @@ p stops[-4]
 # # 3. Get the array of Erik's favourite numbers
 # # users["Erik"][:favourite_numbers]
 # # 4. Get the type of Avril's pet Colin
-# # users["Avril"][:pets]["colin"]
+
+
+ users["Avril"][:pets]["colin"].to_s
 # # 5. Get the smallest of Erik's favourite numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # # users["Erik"][:favourite_numbers].min
 # # 6. Add the number `7` to Erik's favourite numbers
 # # users["Erik"][:favourite_numbers].unshift(7)
